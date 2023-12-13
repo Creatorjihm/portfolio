@@ -1,0 +1,550 @@
+.header {
+  height: 100vh;
+  background: url("../img/Orb\ animation\ WIP.gif") no-repeat center
+    center/contain;
+  background-color: black;
+  background-size: 70%;
+  position: relative;
+  padding: 0 10rem;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.header * {
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(6, 80, 80);
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 8rem;
+  width: 40%;
+  min-width: 50rem;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 6rem;
+  z-index: 11;
+}
+
+.nav ul {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.nav ul li a {
+  font-size: 2rem;
+}
+
+.nav ul li a:hover,
+.nav ul li a:active {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+
+.hero-content-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+/* //////////////////////////////////////////////////////////
+/* MOBILE */
+.mobile-nav {
+  display: none;
+}
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  /* cursor: pointer; */
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #fff;
+}
+
+/* Make sure the square brackets of the attribute selector are merged together with the class for this to work */
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+/* NOTE that in CSS we can make use of an attribute selector  */
+/* ///////////////////////////////////////////////////////////////// */
+
+.my-description {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.my-description h2 {
+  color: #fff;
+  font-size: 4rem;
+}
+
+.my-description h1 {
+  color: #fff;
+  font-size: 7rem;
+  margin-bottom: -1rem;
+}
+
+.my-description h3 {
+  font-size: 4rem;
+}
+
+.my-description p {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin-top: -1.5rem;
+}
+
+/* //////////////
+ABOUT SECTION
+///////////////// */
+.container-mod1 {
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading-txt {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  position: relative;
+}
+
+.heading-txt::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 1.5rem);
+  height: 5px;
+  width: 8rem;
+  background: rgba(0, 255, 255, 0.233);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.icons-container {
+  display: flex;
+  padding: 0 6rem;
+}
+
+.icon-row-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 3rem auto;
+  padding: 1rem 3rem;
+  max-width: 30rem;
+}
+
+.icon-tag {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.icon-desc {
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* STYLING THE MORE ABOUT BOX */
+.more-about-box {
+  display: flex;
+  margin-top: 2rem;
+  /* flex-wrap: wrap; */
+}
+
+.my-desc-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  padding: 0 8rem;
+}
+
+.heading-txt-mod {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.my-desc {
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.skills-box {
+  flex: 1;
+}
+
+.skills-grid {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2rem;
+}
+
+.skills-icon-box {
+  width: fit-content;
+  text-align: center;
+}
+
+.icon-tag-mod {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #fff;
+  /* font-weight: 600; */
+}
+
+.btn-box {
+  display: flex;
+  align-self: flex-start;
+  margin-left: 8rem;
+  margin-top: 2rem;
+}
+
+/* //////////////////////////////////// */
+.projects {
+  margin-top: 5rem;
+}
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 20px; */
+  padding: 2rem 5rem;
+  /* justify-content: center; */
+  /* height: 100vh; */
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  /* height: 100%; */
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.portfolio-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1.2rem;
+  color: #fff;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio-item h3 {
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.portfolio-item p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.portfolio-item p:nth-child(3) {
+  margin-bottom: 3rem;
+}
+
+.portfolio-item a {
+  text-transform: none;
+  font-size: 2rem;
+}
+
+/* //////////////////////////////////////
+CONTACT SECTION
+//////////////////////////////////////// */
+.contact {
+  margin: 10rem 0;
+  padding: 0 10rem;
+}
+.contact-txt {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+  text-align: center;
+  color: #fff;
+  line-height: 2.4rem;
+  /* margin-bottom: 10rem; */
+}
+
+.form-box {
+  padding: 2rem 10rem;
+}
+
+.cta-form {
+  /* text-align: center; */
+  max-width: 100rem;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 2rem;
+  padding: 5rem 10rem;
+  background-color: rgba(0, 255, 255, 0.233);
+  border-radius: 2rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 1.2rem;
+}
+
+.cta-form input {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: #333;
+  /* this will inherit the font family on the parent element and applied on the placeholder */
+  border: none;
+  background: #f0f0f0;
+  border-radius: 0.9rem;
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
+}
+
+.textbox {
+  width: 100%;
+  color: #333;
+  padding: 1.2rem;
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: inherit;
+  letter-spacing: 0;
+  background: #f0f0f0;
+  border-radius: 9px;
+}
+
+/* ///////////////////////////////////////
+FOOTER SECTION 
+////////////////////////////////////////// */
+.footer {
+  background-color: black;
+}
+
+.footer-box {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+.row1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0rem;
+  color: #fff;
+}
+
+.left-box {
+  max-width: 50rem;
+}
+
+.footer-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+
+.left-box p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.socials-mod {
+  position: static;
+  flex-direction: row;
+}
+
+.right-box::after {
+  border: 2px solid #fff;
+}
+
+.row2 {
+  text-align: center;
+  color: #fff;
+  border-top: 1px solid #ffffff50;
+  font-size: 1.2rem;
+  padding: 5rem;
+  background-color: inherit;
+}
+
+.copyright a {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+/* /////////////////////////////////////
+///////////////////////////////////////
+MY DESCRIPTION ANIMATION
+////////////////////////////////////////
+////////////////////////////////////// */
+.animate-box {
+  display: flex;
+  align-items: center;
+  margin-left: -1.3rem;
+}
+
+.iam {
+  color: white;
+  font-size: 5.5rem;
+  padding: 1.5rem;
+  font-family: sans-serif;
+}
+
+.text {
+  color: white;
+  border-right: 0.5rem solid rgba(6, 80, 80);
+  font-size: 5.5rem;
+  font-family: sans-serif;
+  color: rgba(6, 80, 80);
+}
+
+/* /////////////////////////////////////
+///////////////////////////////////////
+ANIMATED CURSOR CSS1
+////////////////////////////////////////
+////////////////////////////////////// */
+* {
+  cursor: none;
+}
+#cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#cursor-border {
+  --size: 30px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px white;
+  pointer-events: none;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+    height 0.15s ease-out, background-color 0.15s ease-out;
+  z-index: 999;
+}
+
+input,
+textarea {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  border-radius: 0;
+  box-shadow: 0 0 10px #64ffda, 0 0 10px #64ffda inset;
+  /* text-shadow: 0 0 5px #64ffda, 0 0 10px #64ffda; */
+  transition: 0.3s ease-out;
+}
+
+input:hover,
+textarea:hover {
+  /* color: black; */
+  background-color: #64ffda;
+  border-color: #64ffda;
+  box-shadow: 0 0 80px #64ffda;
+}
+
+input:active,
+textarea:active {
+  transform: scale(0.85);
+  box-shadow: 0 0 30px #64ffda;
+}
+
+/* /////////////////////////////////////
+///////////////////////////////////////
+ANIMATED CURSOR CSS2
+////////////////////////////////////////
+////////////////////////////////////// */
+/* .cursor {
+  z-index: 1000;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+    background-color 0.3s, width 0.3s, height 0.3s;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.active {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  &.hidden {
+    opacity: 0 !important;
+  }
+} */

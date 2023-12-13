@@ -1,0 +1,218 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  background: #0c0c0c;
+  /* cursor: none; */
+}
+
+img {
+  width: 300px;
+}
+
+.hero {
+  max-width: 120rem;
+  padding: 20rem 3.2rem 12rem;
+  margin: 0rem auto;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  border: 3px solid rgba(0, 255, 255, 0.233);
+  padding: 1.5rem 3rem;
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: rgba(0, 255, 255, 0.233);
+  transition: all 0.5s;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-mod,
+.btn-mod:link,
+.btn-mod:visited {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 2rem;
+  padding: 1.6rem 3.2rem;
+  /* best practice to use double the px of the top and bottom value on the sides */
+  border-radius: 0.9rem;
+
+  /* Only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  /* font-family: inherit; */
+
+  /* Always put transition on the original "state" */
+  /* transition: background-color 0.3s; */
+  /* transition: all 0.3s; */
+}
+
+.btn-mod:hover {
+  color: #fff;
+  background-color: rgba(0, 255, 255, 0.233);
+  transition: all 0.5s;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  padding: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+  fill: #fff;
+  background-color: rgba(0, 255, 255, 0.233);
+  border-radius: 40%;
+}
+
+.feature-icon-mod {
+  padding: 2rem;
+}
+
+.feature-icon-mod1 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.feature-icon-mod1:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+
+.feature-icon-mod2 {
+  border-radius: 0%;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0rem;
+  margin-right: 1rem;
+  background-color: transparent;
+}
+
+.feature-icon-mod2:hover {
+  fill: rgba(0, 255, 255, 0.233);
+  transition: all 0.2s;
+}
+
+/* ////////////////////////////////////////
+SOCIALS
+/////////////////////////////////////////// */
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  position: fixed;
+  top: 27%;
+  left: 2%;
+}
+
+.git-icon {
+  top: 94%;
+  position: fixed;
+}
+
+.git-icon-mod {
+  height: 4rem;
+  width: 4rem;
+  padding: 0rem;
+  background-color: transparent;
+  margin-left: 1rem;
+}
+
+.git-icon-mod:hover {
+  fill: rgba(0, 255, 255, 0.233);
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+
+/* ////////////
+MOUSE ANIMATION ON HERO SECTION
+/////////////// */
+.mouse-div {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouse {
+  width: 40px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mouse::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 7px;
+  left: 45%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+  0%,
+  100% {
+    transform: translateY(40px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+/* ////////////
+ANIMATION CLOSED
+/////////////// */
+
+/* /////////////////////////////////////
+STYLING THE SCROLL TO TOP
+//////////////////////////////////////// */
+.scroll-up {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.up-arrow {
+  width: 10rem;
+  height: 10rem;
+}
