@@ -20,10 +20,6 @@
     padding: 19rem 3rem;
   }
 
-  .git-icon {
-    top: 92%;
-  }
-
   .icons-container {
     display: flex;
     gap: 7rem;
@@ -110,10 +106,14 @@
   .git-icon {
     top: 94%;
   }
+
+  .scroll-up {
+    bottom: 1%;
+  }
 }
 
 /* ********************************** */
-/* ABOVE 1040px (medium desktops) 1040 / 16px = 65em */
+/* BELOW 1040px (medium desktops) 1040 / 16px = 65em */
 /* ********************************** */
 @media screen and (max-width: 65.7em) {
   .hero {
@@ -138,7 +138,7 @@
 }
 
 /* ********************************** */
-/* ABOVE 944px (medium desktops) 944 / 16px = 59em */
+/* BELOW 944px (medium desktops) 944 / 16px = 59em */
 /* ********************************** */
 @media screen and (max-width: 59em) {
   html {
@@ -204,11 +204,11 @@
     margin-left: 0;
   }
 
-  /* MOBILE NAVIGATION */
-  .nav {
-    display: none;
+  .scroll-up {
+    bottom: 1%;
   }
 
+  /* MOBILE NAVIGATION */
   .btn-mobile-nav-box {
     width: 100%;
     /* height: 5rem; */
@@ -400,7 +400,6 @@
   }
 
   .git-icon {
-    top: 92%;
     z-index: 10;
   }
 
@@ -419,5 +418,32 @@
 
   .mouse-div {
     display: none;
+  }
+}
+
+/* ********************************** */
+/* BELOW 500px (medium desktops) 500 / 16px = 31.25em */
+/* ********************************** */
+@media screen and (max-width: 31.25em) {
+  .scroll-up {
+    bottom: 0%;
+  }
+}
+
+/* ********************************** */
+/* BELOW 380px (medium desktops) 380 / 16px = 23.75em */
+/* ********************************** */
+@media screen and (max-width: 23.75em) {
+  .nav ul {
+    margin-left: -5rem;
+  }
+}
+
+/* ********************************** */
+/* BELOW 350px (medium desktops) 350 / 16px = 21.8em */
+/* ********************************** */
+@media screen and (max-width: 21.87em) {
+  .scroll-up {
+    bottom: -2%;
   }
 }
